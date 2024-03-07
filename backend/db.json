@@ -1,0 +1,30 @@
+{
+  "zl3e12": {
+    "title": "Design the hero page",
+    "category": "ux",
+    "status": "Done",
+    "assigned": "tom hanks",
+    "id": "zl3e12"
+  },
+  "cz3ndu": {
+    "title": "Start with the backend",
+    "category": "backend",
+    "status": "Done",
+    "assigned": "Luna",
+    "id": "cz3ndu"
+  },
+  "k1ohtu": {
+    "title": "Do the front end",
+    "category": "frontend",
+    "status": "In Progress",
+    "assigned": "tom",
+    "id": "k1ohtu"
+  },
+  "4jzn72": {
+    "title": "Put node module to gitignore",
+    "category": "backend",
+    "status": "To Do",
+    "assigned": "",
+    "id": "4jzn72"
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="sl-theme-dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/shoelace-autoloader.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/themes/dark.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="./src/main.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <form id="task-form" class="task-form">
+        <sl-input
+          id="task-title"
+          type="text"
+          placeholder="Enter task title"
+          required
+        ></sl-input>
+        <sl-select id="task-category" value="ux">
+          <sl-option value="ux">UX</sl-option>
+          <sl-option value="frontend">Front-end</sl-option>
+          <sl-option value="backend">Back-end</sl-option>
+        </sl-select>
+        <sl-button type="submit" variant="primary">Add</sl-button>
+      </form>
+      <div class="legend">
+        <div class="tag ux">UX</div>
+        <div class="tag frontend">Front-end</div>
+        <div class="tag backend">Back-end</div>
+      </div>
+      <div class="swimlanes">
+        <div class="lane" id="lane-todo">
+          <header>To Do</header>
+        </div>
+        <div class="lane" id="lane-in-progress">
+          <header>In Progress</header>
+        </div>
+        <div class="lane" id="lane-done">
+          <header>Done</header>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
