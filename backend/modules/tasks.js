@@ -1,19 +1,22 @@
 import { generateUID } from "../lib/utils.js";
 import { readDatabase, writeDatabase } from "./db.js";
 
-// RULES
+// RULES to define constants for task status & category
 const STATUS = { "to do": "To Do", "in progress": "In Progress", done: "Done" };
 const CATEGORY = { ux: "UX", backend: "Back-end", frontend: "Front-end" };
 
+// retrieve all tasks from db.js
 async function getTasks() {
   return await readDatabase();
 }
 
+//  retrieve specific task by its ID
 async function getTask(id) {
   const tasks = getTasks();
   return tasks[id];
 }
 
+// Add New Task to db.json
 async function addTask(task) {
   const { title, category } = task;
   if (!title || !category) {
@@ -31,6 +34,7 @@ async function addTask(task) {
   return tasks[id];
 }
 
+// UPDATE TASK IN THE DB.JSON
 async function updateTask(id, task) {
   const { assigned, status } = task;
   if (!assigned && !status) {
@@ -57,6 +61,7 @@ async function updateTask(id, task) {
   return taskData;
 }
 
+// remove task with provided ID
 async function removeTask(id) {
   const tasks = await getTasks();
   if (!tasks[id]) throw { message: "Task doesn't exists" };

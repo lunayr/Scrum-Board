@@ -11,10 +11,12 @@ app.use((req, res, next) => {
   next();
 });
 
+// retrieve ALL TASKS
 app.get("/tasks", (req, res) => {
   tasks.getTasks().then((tasks) => res.json(tasks));
 });
 
+// to add new task
 app.post("/tasks", (req, res) => {
   console.log(req.body);
   tasks
@@ -26,6 +28,7 @@ app.post("/tasks", (req, res) => {
     });
 });
 
+// update existing task
 app.patch("/tasks/:id", (req, res) => {
   tasks
     .updateTask(req.params.id, req.body)
@@ -37,6 +40,7 @@ app.patch("/tasks/:id", (req, res) => {
     });
 });
 
+// delete task
 app.delete("/tasks/:id", (req, res) => {
   tasks
     .removeTask(req.params.id)
