@@ -31,6 +31,7 @@ app.patch("/tasks/:id", (req, res) => {
     .updateTask(req.params.id, req.body)
     .then((task) => res.json(task))
     .catch((error) => {
+      console.log(error)
       res.status(error.status);
       res.json(error.message);
     });

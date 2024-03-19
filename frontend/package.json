@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "name": "workflow-manager-backend",
+  "version": "1.0.0",
+  "description": "Manage your work",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

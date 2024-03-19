@@ -1,12 +1,10 @@
 {
   "type": "module",
-  "name": "workflow-manager",
+  "name": "workflow-manager-backend",
   "version": "1.0.0",
   "description": "Manage your work",
   "scripts": {
-    "front:start": "live-server ./frontend/",
-    "backend:start": "node --watch ./backend/main.js",
-    "start": "live-server ./frontend/; node --watch ./backend/main.js"
+    "start": "node --watch main.js"
   },
   "author": "",
   "license": "ISC",

@@ -6,25 +6,25 @@
     "assigned": "tom hanks",
     "id": "zl3e12"
   },
-  "cz3ndu": {
-    "title": "Start with the backend",
-    "category": "backend",
-    "status": "Done",
-    "assigned": "Luna",
-    "id": "cz3ndu"
-  },
   "k1ohtu": {
     "title": "Do the front end",
     "category": "frontend",
-    "status": "In Progress",
+    "status": "Done",
     "assigned": "tom",
     "id": "k1ohtu"
   },
   "4jzn72": {
     "title": "Put node module to gitignore",
     "category": "backend",
-    "status": "To Do",
-    "assigned": "",
+    "status": "In Progress",
+    "assigned": "asdas",
     "id": "4jzn72"
+  },
+  "t5m7o6": {
+    "title": "sdasdasd",
+    "category": "frontend",
+    "status": "In Progress",
+    "assigned": "asasdsad",
+    "id": "t5m7o6"
   }
 }
