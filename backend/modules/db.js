@@ -1,5 +1,9 @@
 import fs from "fs/promises";
 
+/////////////////////////////
+//  Read & Write data for db.json //
+/////////////////////////////
+
 async function readDatabase() {
   const rawdb = await fs.readFile("./db.json");
   return JSON.parse(rawdb);

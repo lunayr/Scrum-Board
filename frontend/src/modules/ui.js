@@ -6,8 +6,10 @@ const lanes = {
   Done: $("#lane-done"),
 };
 
+// Create task card based on its properties and status
 function createTaskCard(task) {
   const card = $(
+    // Create a new HTML element for the task card
     `
     <div id="task-${task.id}"class='task'>
         <div class='category cat-${task.category}'></div>
@@ -15,7 +17,9 @@ function createTaskCard(task) {
     </div>`
   );
 
+  // Check the status of the task and add appropriate elements based on status
   if (task.status === "To Do") {
+    // Create a form for assigning the task if its in the "To Do" status
     const assignForm = $(
       `<form>
         <sl-input size="small" required placeholder="Enter name to assign"></sl-input>
@@ -23,6 +27,8 @@ function createTaskCard(task) {
         <sl-button size="small" type="submit">Assign</sl-button>
       </form>`
     );
+
+    // Event listener for the assign form
     assignForm.on("submit", assignTask);
     card.append(assignForm);
   } else if (task.status === "In Progress") {
@@ -31,6 +37,8 @@ function createTaskCard(task) {
             Done
         </sl-button>`
     );
+
+    // Event listener for the DONE BUTTON
     doneButton.on("click", (e) => completeTask(e, task.id));
     card.append(`<div>- ${task.assigned}</div>`, doneButton);
   } else if (task.status === "Done") {
@@ -40,6 +48,8 @@ function createTaskCard(task) {
         Delete
       </sl-button>`
     );
+
+    // Event Listener for the REMOVE BUTTON
     removeButton.on("click", (e) => deleteTask(e, task.id));
     card.append(`<div>- ${task.assigned}</div>`, removeButton);
   }

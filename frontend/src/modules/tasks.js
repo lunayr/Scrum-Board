@@ -3,6 +3,11 @@ import { createTaskCard } from "./ui.js";
 const headers = { "Content-Type": "application/json" };
 const API_URI = "http://localhost:1453";
 
+///////////////////////////
+// CRUD OPERATIONS //
+///////////////////////////
+
+
 async function createTask(event) {
   event.preventDefault();
   const title = $("#task-title").val();
