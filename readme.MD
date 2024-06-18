@@ -1,4 +1,4 @@
-Tools used for the project:
+Tools/libraries used for the project:
   - jQuery
   - Nodejs
   - Cors
