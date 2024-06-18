@@ -1,3 +1,11 @@
+Tools used for the project:
+  - jQuery
+  - Nodejs
+  - Cors
+  - Express
+  - Shoelace
+
+
 To start the frontend:
 
 ```
